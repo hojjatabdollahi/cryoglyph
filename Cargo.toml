@@ -10,11 +10,12 @@ license = "MIT OR Apache-2.0 OR Zlib"
 [dependencies]
 wgpu = { version = "28", default-features = false, features = ["wgsl"] }
 etagere = "0.2"
-cosmic-text = "0.18"
+cosmic-text = { git = "https://github.com/pop-os/cosmic-text.git", rev = "9a2ab09f06905e91f41d64ac6eee887726e7fd76" }
 lru = { version = "0.16", default-features = false }
 rustc-hash = "2"
 
 [dev-dependencies]
+wgpu = { version = "28", features = ["vulkan"] }
 winit = "0.30"
 pollster = "0.4"
 criterion = { version = "0.5", features = ["html_reports"] }
